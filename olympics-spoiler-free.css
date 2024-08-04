@@ -1,0 +1,69 @@
+/* ==UserStyle==
+@name           olympics.com - Aug 2024
+@namespace      github.com/openstyles/stylus
+@version        1.0.0
+@description    Hides the results and participants of Olympic events from the schedule. I literally cannot understand why this isn't the default behavior. Spoilers suck.
+@author         Go1den
+==/UserStyle== */
+
+/* Hides the final scores */
+
+.results {
+    display: none;
+}
+
+/* Hide the winner checkmark */
+
+img[src*="https://gstatic.olympics.com/s1/t_original/static/srm/paris-2024/W.svg"] {
+    display: none;
+}
+
+/* Hides the bolded team names for winning teams */
+
+span {
+    font-weight: 400 !important; 
+}
+
+/* Hides who is playing in each game */
+
+div[data-row-type*="day-schedule-unit"] > a > div > div:nth-child(2) {
+    display: none;
+}
+
+/* Hides random inserted spoilers as you scroll down the schedule. WTF Olympics? Who would want this? */
+
+div[data-row-type*="custom-row-info-box"] {
+    display: none;
+}
+
+/* Hides results when clicking the + button to expand the schedule */
+
+.emotion-srm-0 > div:nth-child(2) {
+    display: none;
+}
+
+/* Hides the footer just in case and because who uses the footer */
+
+#p2024-footer {
+    display: none;
+}
+
+/* Dark mode is nice */
+
+body {
+    background-color: #222222;
+}
+
+/* Main Page, Hiding Headlines and Images */
+
+.text--emotional-lead-title {
+    display: none;
+}
+
+picture > img {
+    display: none;
+}
+
+div[data-cy*="next-item"] {
+    display: none;
+}
